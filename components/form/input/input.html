@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form | Invoice</title>
+  <link rel="stylesheet" href="../../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../../assets/css/normalize.css">
+  <link rel="stylesheet" href="../../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../../assets/img/icomoon/style.css">
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <link rel="stylesheet" href="input.css">
+</head>
+<body>
+  <i class="icon-moon"  id="theme-toggler"></i>
+<form class="form">
+  <h2 class="action-title">New Invoice</h2>
+  <h3 class="bill-type">Bill From</h3>
+  <div class="form-group">
+    <label class="label"  for="sellers-street">Street Address</label>
+    <input type="text" name="sellers-street" id="sellers-street">
+    <span class="error-message">can’t be empty</span>
+  </div>
+
+  <div class="form-group">
+    <label class="label" for="sellers-city">City</label>
+    <input type="text" name="sellers-city" id="sellers-city">
+      <span class="error-message">can’t be empty</span>
+  </div>
+
+  <div class="form-group">
+    <label class="label" for="sellers-post-code">Post Code</label>
+    <input type="text" name="sellers-post-code" id="sellers-post-code">
+      <span class="error-message">can’t be empty</span>
+  </div>
+
+  <div class="form-group">
+    <label class="label" for="sellers-country">Country</label>
+    <input type="text" name="sellers-country" id="sellers-country">
+      <span class="error-message">can’t be empty</span>
+  </div>
+  <h3 class="bill-type">Bill to</h3>
+  <div class="form-group">
+    <label class="label" for="clients-f-name">Client’s Name</label>
+    <input type="text" name="clients-f-name" id="clients-f-name">
+      <span class="error-message">can’t be empty</span>
+  </div>
+
+  <div class="form-group">
+    <label class="label" for="clients-email">Client’s Email</label>
+    <input type="email" name="clients-email" id="clients-email">
+      <span class="error-message">can’t be empty</span>
+  </div>
+
+  <div class="form-group">
+    <label class="label" for="date">Issue Date</label>
+    <input type="date" name="date" id="date">
+      <span class="error-message">can’t be empty</span>
+  </div>
+
+  <div class="form-group">
+    <label class="label" for="description">Project Description</label>
+    <input type="text" name="description" id="description">
+      <span class="error-message">can’t be empty</span>
+  </div>
+
+  <div class="form-group">
+    <label class="label" for="items-name">Item Name</label>
+    <input type="text" name="items-name" id="items-name">
+      <span class="error-message">can’t be empty</span>
+  </div>
+
+  <div class="form-group">
+    <label class="label" for="quantity">Qty.</label>
+    <input type="number" name="quantity" id="quantity" min="1" >
+      <span class="error-message">can’t be empty</span>
+  </div>
+
+  <div class="form-group">
+    <label class="label" for="price">Price</label>
+    <input type="text" name="price" id="price">
+      <span class="error-message">can’t be empty</span>
+  </div>
+
+<label class="label" for="terms"  class="payment-terms">Payment Terms</label>
+<select name="terms" id="terms">
+  <option value="" selected>Next 1 Day</option>
+  <option value="" >Next 7 Day</option>
+  <option value="" >Next 14 Day</option>
+  <option value="" >Next 30 Day</option>
+</select>
+<br>
+<span class="warning-message">
+  - All fields must be added
+<br>
+  - An item must be added
+</span>
+<button role="button"> Cancel </button>
+<button role="button"> Save Changes </button>
+</form>
+
+<script>
+const themeToggler = document.getElementById("theme-toggler");
+
+themeToggler.addEventListener("click", ()=>{
+  setTimeout(toggleTheme,100)})
+
+// Retrieve the theme from localStorage on page load
+const savedTheme = localStorage.getItem("theme");
+
+// Set initial theme based on localStorage or default to light theme
+// document.body.classList.toggle("dark-theme", savedTheme === "dark");
+if(savedTheme==="dark"){
+  document.body.classList.toggle("dark-theme");
+  themeToggler.src = "../../../assets/img/sun.svg";
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
+
+  // Save the current theme state to localStorage
+  localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
+
+  // Update theme toggler w image based on the new theme
+  if (document.body.classList.contains("dark-theme")) {
+    themeToggler.classList.add("icon-sun")
+    themeToggler.classList.remove("icon-moon")
+
+  } else {
+    themeToggler.classList.remove("icon-sun")
+    themeToggler.classList.add("icon-moon")
+  }
+
+}
+
+</script>
+</body>
+</html>

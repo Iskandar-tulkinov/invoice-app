@@ -17,9 +17,7 @@ body {
    top: 0;
    left: 100px;
 }
-.hidden {
-   display: none;
-}
+
 .main-modal .modal-title {
   position: fixed;
   top: 0;

@@ -36,6 +36,12 @@ body {
   background-color: var(--main-bg-color);
   position: relative;
 }
+.section {
+ display: flex;
+ flex-direction: column;
+ background-color: transparent;
+ padding: 77px 252px 71px;
+ }
 .overlay {
    position: fixed;
    top: 0;
@@ -53,6 +59,9 @@ body {
 
 
 /* Utility classes */
+.hidden {
+   display: none;
+}
 .w-126 {
    width: 504px;
    flex-shrink: 0;
@@ -88,6 +97,10 @@ body {
 }
 .flex {
    display: flex;
+}
+.justify-between{
+   display: flex;
+   justify-content: space-between;
 }
 .gap-6 {
    gap: 24px;

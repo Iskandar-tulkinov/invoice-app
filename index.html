@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./components/main-modal/main-modal.css">
   <link rel="stylesheet" href="./components/sidebar/sidebar.css">
   <link rel="stylesheet" href="./components/header/header.css">
+  <link rel="stylesheet" href="./components/invoice-details/invoice-detail.css">
   <link rel="stylesheet" href="./components/card/card.css">
 
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -35,7 +36,7 @@
     </div>
   </aside>
   <main class="main">
-    <header class="header">
+    <header class="header hidden">
       <div class="invoice-title-wrapper">
         <h1 class="invoice__title">Invoices</h1>
         <h4 class="invoice__number">There are 7 total invoices</h4>
@@ -68,7 +69,10 @@
           <span>New <span>Invoice</span></span></button>
       </div>
     </header>
-    <section id="card-box" class="section">
+    <section class="section hidden">
+      <div id="card-box">
+
+      <!-- </div>
       <div class="card">
         <span class="invoice__id"><span>#</span>RT3080</span>
         <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
@@ -98,8 +102,109 @@
           <span class="invoice__status draft">paid</span>
           <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
         </span>
-      </div>
+      </div> -->
 
+      <div class="no-invoice hidden">
+        <img class="no-invoice__img" src="./assets/img/no-data-img.svg" alt="No invoices message">
+        <h3 class="no-invoice__title" >  There is nothing here</h3>
+        <p class="no-invoice__text">Create an invoice by clicking the <br>
+          <strong>New button</strong> and get started</p>
+
+      </div>
+    </section>
+
+    <!-- Show Invoice Details -->
+    <section class="section">
+      <div class="invoice-detail-section">
+        <div class="go-back">
+          <svg class="left-icon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5.2279 5.2279L9.4558 1" stroke="CurrentColor" stroke-width="2"/>
+            </svg>
+          <span class="text-bold">Go back</span>
+        </div>
+        <header class="show-header justify-between">
+          <div class="status-wrapper">
+            <h3 class="subtitle">Status</h3>
+            <span class="show-status pending">Pending</span>
+          </div>
+          <div class="actions-wrapper">
+            <button class="btn btn-tertiary">Edit</button>
+          <button class="btn btn-warning  ">Delete</button>
+         <!-- <button class="btn btn-primary">Mark as Pending</button> -->
+          <button class="btn btn-primary">Mark as Paid</button>
+          </div>
+        </header>
+        <div class="invoice-details">
+          <div class="justify-between">
+            <div class="show-id-description">
+              <span class="show-id text-bold">#XM9141</span>
+              <span class="show-description">Graphic Design</span>
+            </div>
+            <div class="senders-address-wrapper">
+              <span class="show-senders-street">
+                19 Union Terrace
+              </span>
+              <span class="show-senders-city">
+                London
+              </span>
+              <span class="show-senders-postcode">
+                NW1 8JR
+              </span>
+              <span class="show-senders-country">
+                UK
+              </span>
+            </div>
+          </div>
+          <div class="justify-between">
+            <div class="dates-wrapper">
+              <span>
+                <span class="subtitle">Invoice Date</span>
+                <span class="show-issue-date text-bold">21 Aug 2021</span>
+              </span>
+              <span>
+                <span class="subtitle">Due Date</span>
+                <span class="show-due-date text-bold">20 Sep 2021</span>
+              </span>
+            </div>
+            <div class="clients-info-wrapper">
+              <span>
+                <span class="subtitle">Bill To</span>
+                <span class="show-show-clients-name text-bold">Alex Grim</span>
+              </span>
+              <span class="clients-address subtitle">
+                <span class="show-client-street">84 Church Way</span>
+                <span class="show-client-city">Bradford</span>
+                <span class="show-client-postcode">BD1 9PB</span>
+                <span class="show-client-country">UK</span>
+              </span>
+            </div>
+            <div class="clients-email-wrapper">
+              <span class="subtitle">Sent to</span>
+              <span class="show-clients-email text-bold">alexgrim@mail.com</span>
+            </div>
+          </div>
+          <div class="show-items-list">
+            <div class="justify-between">
+              <h3 class="subtitle">Item Name</h3>
+              <h3 class="subtitle">QTY.</h3>
+              <h3 class="subtitle">Price</h3>
+              <h3 class="subtitle">Total</h3>
+            </div>
+            <div class="show-item justify-between">
+              <h4 class="text-bold">Banner Design</h4>
+              <h4 class="text-bold">1</h4>
+              <h4 class="text-bold">£ 156.00</h4>
+              <h4 class="text-bold">£ 156.00</h4>
+
+            </div>
+
+          </div>
+          <div class="show-total-price-wrapper">
+            <span class="">Amount Due</span>
+            <span class="total-price ">£ 556.00</span>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </div>

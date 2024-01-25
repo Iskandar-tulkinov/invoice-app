@@ -20,6 +20,7 @@
    --border-color: #dfe3fa;
    --hover-dark-bg-color: #0c0e16;
    --add-color: #f9fafe;
+   --total-price-bg-color: #373B53;
    --modal-scroll-bg-color:linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 100%);
   }
   .dark-theme {
@@ -39,6 +40,7 @@
     --border-color: #252945;
     --hover-dark-bg-color: #1e2139;
     --add-color: #252945;
+    --total-price-bg-color: #0C0E16;
     --modal-scroll-bg-color:  linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 0%,

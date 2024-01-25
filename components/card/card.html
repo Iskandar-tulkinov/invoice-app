@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cards | Invoice App</title>
+
+      <link rel="stylesheet" href="./card.css">
+      <link rel="stylesheet" href="../../assets/css/normalize.css">
+      <link rel="stylesheet" href="../../assets/css/reset.css">
+      <link rel="stylesheet" href="../../assets/css/variables.css">
+      <link rel="stylesheet" href="../../assets/css/style.css">
+      
+   </head>
+   <body class="main">
+      <h2 id="theme-toggler" style="color: var(--text-color); cursor: pointer;" >Click to toggle theme</h2>
+      <div class="section">
+         <div class="card">
+            <span class="invoice__id"><span>#</span>RT3080</span>
+            <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
+            <span class="invoice__to">Jensen Huang</span>
+            <span class="invoice__amount">£ 1,800.90</span>
+            <span>
+               <span class="invoice__status paid">paid</span>
+               <img
+                  class="right-icon"
+                  src="../../assets/img/arrow-right.svg"
+                  alt="Right arrow icon" />
+            </span>
+         </div>
+         <div class="card">
+            <span class="invoice__id"><span>#</span>RT3080</span>
+            <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
+            <span class="invoice__to">Jensen Huang</span>
+            <span class="invoice__amount">£ 1,800.90</span>
+            <span>
+               <span class="invoice__status pending">paid</span>
+               <img
+                  class="right-icon"
+                  src="../../assets/img/arrow-right.svg"
+                  alt="Right arrow icon" />
+            </span>
+         </div>
+         <div class="card">
+            <span class="invoice__id"><span>#</span>RT3080</span>
+            <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
+            <span class="invoice__to">Jensen Huang</span>
+            <span class="invoice__amount">£ 1,800.90</span>
+            <span>
+               <span class="invoice__status draft">paid</span>
+               <img
+                  class="right-icon"
+                  src="../../assets/img/arrow-right.svg"
+                  alt="Right arrow icon" />
+            </span>
+         </div>
+      </div>
+      <script src="../../js/theme-toggle.js"></script>
+   </body>
+</html>

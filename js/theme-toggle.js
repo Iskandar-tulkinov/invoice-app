@@ -11,7 +11,7 @@ const savedTheme = localStorage.getItem("theme");
 // document.body.classList.toggle("dark-theme", savedTheme === "dark");
 if(savedTheme==="dark"){
   document.body.classList.toggle("dark-theme");
-  themeToggler.src = "../assets/img/sun.svg";
+  themeToggler.setAttribute("class", "icon-sun");
 }
 
 function toggleTheme() {
@@ -22,9 +22,9 @@ function toggleTheme() {
 
   // Update theme toggler w image based on the new theme
   if (document.body.classList.contains("dark-theme")) {
-    themeToggler.src = "../assets/img/sun.svg";
+    themeToggler.setAttribute("class", "icon-sun");
   } else {
-    themeToggler.src = "../assets/img/moon.svg";
+    themeToggler.setAttribute("class", "icon-moon");
   }
 
 }

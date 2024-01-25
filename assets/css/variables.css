@@ -1,30 +1,47 @@
-:root{
-  --primary-color: #7C5DFA;
-  --hover-primary-color: #9277FF;
-  --warning: #EC5757;
-  --paid: #33D69F;
-  --pending-color: #FF8F00;
-
-  --text-color: #0C0E16;
-  --secondary-text-color: #0C0E16;
-  --subtext-color: #888EB0;
-  --aside-bg-color:  #141625;
-  --main-bg-color: #F8F8FB;
-  --secondary-bg-color: ##FFF;
-  --modal-bg-color:#fff;
-  --input-bg-color: #fff;
-  --border-color: #DFE3FA;
-
-}
-.dark-theme{
-  --text-color: #fff;
-  --secondary-text-color: #fff;
-  --subtext-color: #DFE3FA;
-  --main-bg-color: #141625;
-  --secondary-bg-color: #1E2139 ;
-  --aside-bg-color:  #1E2139;
-  --modal-bg-color:#141625;
-  --input-bg-color: #1E2139;
-  --border-color: #252945;
-
-}
+:root {
+   --primary-color: #7c5dfa;
+   --hover-primary-color: #9277ff;
+   --warning: #ec5757;
+   --paid: #33d69f;
+   --pending-color: #ff8f00;
+   --text-color: #0c0e16;
+   --secondary-text-color: #0c0e16;
+   --subtext-color: #888eb0;
+   --subtitle-color: #7e88c3;
+   --aside-bg-color: #141625;
+   --main-bg-color: #f8f8fb;
+   --secondary-bg-color: #fff;
+   --tertiary-color: #f9fafe;
+   --hover-tertiary-color: #dfe3fa;
+   --modal-bg-color: #fff;
+   --filter-list-color: #fff;
+   --bill-taker-color:#858BB2;
+   --input-bg-color: #fff;
+   --border-color: #dfe3fa;
+   --hover-dark-bg-color: #0c0e16;
+   --add-color: #f9fafe;
+   --modal-scroll-bg-color:linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 100%);
+  }
+  .dark-theme {
+    --text-color: #fff;
+    --secondary-text-color: #fff;
+    --subtext-color: #dfe3fa;
+    --subtitle-color: #dfe3fa;
+    --main-bg-color: #141625;
+    --filter-list-color: #252945;
+    --bill-taker-color: #fff;
+    --secondary-bg-color: #1e2139;
+    --tertiary-color: #252945;
+    --hover-tertiary-color: #fff;
+    --aside-bg-color: #1e2139;
+    --modal-bg-color: #141625;
+    --input-bg-color: #1e2139;
+    --border-color: #252945;
+    --hover-dark-bg-color: #1e2139;
+    --add-color: #252945;
+    --modal-scroll-bg-color:  linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+   );
+  }

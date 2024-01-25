@@ -26,9 +26,11 @@ i {
 
 .icon-arrow-down:before {
   content: "\e900";
+  color: #494E6E;
 }
 .icon-arrow-right:before {
   content: "\e901";
+  color: #494E6E;
 }
 .icon-delete-icon:before {
   content: "\e902";

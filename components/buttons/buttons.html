@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <!-- <link rel="stylesheet" href="../../assets/css/style.css"> -->
+  <link rel="stylesheet" href="./buttons.css">
+</head>
+<body class="body" style="display: flex; flex-direction: column; align-items: center; gap: 15px; ">
+<button id="theme-toggler">toggle theme</button>
+  <button class="btn btn-cancel">Cancel</button>
+  <button class="btn btn-tertiary">Edit</button>
+  <button class="btn btn-warning  ">Delete</button>
+  <button class="btn btn-cancel">Discord</button>
+  <button class="btn btn-primary">Save & Send</button>
+  <button class="btn btn-quaternary">Save as Draft</button>
+  <button class="btn btn-primary">Mark as Pending</button>
+  <button class="btn btn-primary">Mark as Paid</button>
+  <button class="btn btn-primary">Save Changes</button>
+  <button class="btn btn-quinary">+ Add New Item</button>
+  <button class="btn btn-new-invoice">
+    <img src="../../assets/img/plus.svg" alt="" width="32" height="32">
+    <span>New <span>Invoice</span></span></button>
+    <script>
+        "use strict";
+const themeToggler = document.getElementById("theme-toggler");
+
+themeToggler.addEventListener("click", ()=>{
+  setTimeout(toggleTheme,100)})
+
+// Retrieve the theme from localStorage on page load
+const savedTheme = localStorage.getItem("theme");
+
+// Set initial theme based on localStorage or default to light theme
+// document.body.classList.toggle("dark-theme", savedTheme === "dark");
+if(savedTheme==="dark"){
+  document.body.classList.toggle("dark-theme");
+  themeToggler.src = "../assets/img/sun.svg";
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
+
+  // Save the current theme state to localStorage
+  localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
+
+  // Update theme toggler w image based on the new theme
+  if (document.body.classList.contains("dark-theme")) {
+    themeToggler.src = "../assets/img/sun.svg";
+  } else {
+    themeToggler.src = "../assets/img/moon.svg";
+  }
+
+}
+
+    </script>
+</body>
+</html>

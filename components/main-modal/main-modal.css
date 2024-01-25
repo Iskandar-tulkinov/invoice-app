@@ -1,0 +1,86 @@
+@import url(../../../assets/css/normalize.css);
+body {
+   max-width: 1440px;
+}
+.main-modal {
+   max-width: 720px;
+   width: 100%;
+   z-index: 9999;
+   background-color: var(--modal-bg-color);
+   border-top-right-radius: 20px;
+   border-bottom-right-radius: 20px;
+   /* overflow-x: hidden; */
+   overflow-y: scroll;
+   padding:120px 56px 200px;
+   z-index: 10;
+   position: absolute;
+   top: 0;
+   left: 100px;
+}
+.hidden {
+   display: none;
+}
+.main-modal .modal-title {
+  position: fixed;
+  top: 0;
+  left: 100px;
+  width: 720px;
+  /* height: 100px; */
+  padding: 59px 56px 24px ;
+  z-index: 1;
+  background: var(--modal-bg-color);
+}
+.payment-terms-wrapper {
+   display: flex;
+   flex-direction: column;
+}
+.btn.btn-add-item {
+   margin-top: 18px;
+}
+
+
+.icon-delete-icon{
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+.icon-delete-icon:active{
+  transform: scale(0.95);
+}
+.icon-delete-icon:hover{
+background-color: red;
+border-radius: 5px;
+}
+
+.buttons-wrapper {
+  background-color: var(--modal-bg-color);
+  display: flex;
+  gap: 140px;
+  position: fixed;
+  bottom: 0;
+  padding: 31px 56px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.buttons-wrapper::before {
+  display: none;
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform: translateY(-100%);
+   width: 650px;
+   height: 80px;
+   flex-shrink: 0;
+   background:var(--modal-scroll-bg-color);
+   z-index: -5;
+}
+.buttons-wrapper.active::before{
+  display: block;
+}
+.buttons-wrapper div {
+   display: flex;
+   gap: 8px;
+}

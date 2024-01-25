@@ -1,0 +1,111 @@
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card {
+  background-color: var(--secondary-bg-color);
+  border-radius: 8px;
+border: 1px solid  transparent;
+box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
+padding: 16px 24px 16px 32px;
+margin:0  252px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+cursor: pointer;
+}
+.card:hover{
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.20);
+  border-color: #7C5DFA;
+}
+.invoice__id {
+  color:  var(--secondary-text-color);
+font-family: "League Spartan";
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 15px;
+letter-spacing: -0.25px;
+}
+.invoice__id span{
+  color: #7E88C3;
+}
+.invoice__due-date {
+  color: var(--subtitle-color);
+font-family: "League Spartan";
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: 15px; /* 115.385% */
+letter-spacing: -0.1px;
+}
+.invoice__due-date span{
+  color: #888EB0;
+}
+.invoice__to {
+  color: var(--bill-taker-color);
+font-family: "League Spartan";
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: 15px; /* 115.385% */
+letter-spacing: -0.1px;
+}
+.invoice__amount {
+  color: var(--secondary-text-color);
+text-align: right;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: -0.25px;
+}
+.invoice__status {
+  padding: 14px 30px 11px;
+  border-radius: 6px;
+font-size: 15px;
+font-weight: 700;
+line-height: 15px;
+letter-spacing: -0.25px;
+}
+.invoice__status::before{
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.invoice__status.paid{
+background: rgba(51, 214, 159, 0.0571);
+  color: #33D69F;
+}
+.invoice__status.paid::before{
+  background: #33D69F;
+}
+.invoice__status.pending{
+background:hsla(34, 100%, 50%, 0.0571);
+  color: #FF8F00;
+}
+.invoice__status.pending::before{
+  background: #FF8F00;
+}
+.invoice__status.draft{
+  /* background-color:  hsla(231, 75%, 93%, 1); */
+  background-color: rgba(222, 226, 250,0.1571);
+
+  color: #7E88C3;
+}
+.invoice__status.draft::before{
+  background: #7E88C3;
+}
+.right-icon{
+  display: inline-block;
+  margin-left: 20px;
+  transition: all .3s linear;
+}
+.card:hover .right-icon{
+  transform: translateX(5px);
+}

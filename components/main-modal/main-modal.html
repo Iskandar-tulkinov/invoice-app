@@ -3,108 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invoice App</title>
-  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/img/icomoon/style.css">
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/normalize.css">
-  <link rel="stylesheet" href="./assets/css/variables.css">
-  <link rel="stylesheet" href="./components/buttons/buttons.css">
-  <link rel="stylesheet" href="./components/form/input/input.css">
-  <link rel="stylesheet" href="./components/main-modal/main-modal.css">
-  <link rel="stylesheet" href="./components/sidebar/sidebar.css">
-  <link rel="stylesheet" href="./components/header/header.css">
-  <link rel="stylesheet" href="./components/card/card.css">
-
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Main Modal | Invoice</title>
+  <link rel="stylesheet" href="../../assets/img/icomoon/style.css">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../form/input/input.css">
+<link rel="stylesheet" href="../../components/buttons/buttons.css">
+  <link rel="stylesheet" href="main-modal.css">
 </head>
-<body >
-<div class="container">
-  <aside class="sidebar">
-    <a class="logo" href="./index.html">
-
-      <img src="./assets/img/logo.svg" alt="Logo ">
-    </a>
-
-    <div>
-      <div class="theme-toggle-box">
-        <i class="icon-moon" id="theme-toggler"></i>
-      </div>
-      <hr class="line">
-      <div class="profile-picture-box"><img class="profile-picture" src="./assets/img/profile-picture.svg" alt="profile picture" width="40" height="40"></div>
-    </div>
-  </aside>
-  <main class="main">
-    <header class="header">
-      <div class="invoice-title-wrapper">
-        <h1 class="invoice__title">Invoices</h1>
-        <h4 class="invoice__number">There are 7 total invoices</h4>
-      </div>
-      <div class="filter-wrapper">
-        <div class="filter" >
-          <h3 class="filter__title">
-            Filter <span>by status</span>
-          </h3>
-          <svg class="filter__icon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L5.2279 5.2279L9.4558 1" stroke="CurrentColor" stroke-width="2"/>
-          </svg>
-        </div>
-            <ul role="list" class="filter__list">
-              <li class="filter__list__item">
-                <input type="checkbox">
-                Paid
-              </li>
-              <li class="filter__list__item">
-                <input type="checkbox">
-                Pending
-              </li>
-              <li class="filter__list__item">
-                <input type="checkbox">
-                Draft
-              </li>
-            </ul>
-        <button class="btn btn-new-invoice">
-          <img src="../../assets/img/plus.svg" alt="" width="32" height="32">
-          <span>New <span>Invoice</span></span></button>
-      </div>
-    </header>
-    <section id="card-box" class="section">
-      <div class="card">
-        <span class="invoice__id"><span>#</span>RT3080</span>
-        <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
-        <span class="invoice__to">Jensen Huang</span>
-        <span class="invoice__amount">£ 1,800.90</span>
-        <span >
-          <span class="invoice__status paid">paid</span>
-          <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
-        </span>
-      </div>
-      <div class="card">
-        <span class="invoice__id"><span>#</span>RT3080</span>
-        <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
-        <span class="invoice__to">Melissa Clard</span>
-        <span class="invoice__amount">£ 1,800.90</span>
-        <span >
-          <span class="invoice__status pending">paid</span>
-          <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
-        </span>
-      </div>
-      <div class="card">
-        <span class="invoice__id"><span>#</span>LG9581</span>
-        <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
-        <span class="invoice__to">John Cena</span>
-        <span class="invoice__amount">£ 1,800.90</span>
-        <span >
-          <span class="invoice__status draft">paid</span>
-          <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
-        </span>
-      </div>
-
-    </section>
-  </main>
-</div>
-<!-- Main Modal -->
-<div class="main-modal hidden">
+<body style=" background-color: #555; height: 100%; width: 100%;">
+  <i class="icon-moon" style="position: fixed; right: 15px; top: 15px;" id="theme-toggler"></i>
+  <div id="overlay" class=""></div>
+<div class="main-modal">
   <form class="form w-126">
     <h2 class="modal-title w-126">New Invoice</h2>
     <h3 class="bill-type">Bill From</h3>
@@ -206,7 +116,7 @@
     - An item must be added
   </span>
  <div class="buttons-wrapper">
-  <button onclick="closeModal()" class="btn btn-cancel">Discard</button>
+  <button  class="btn btn-cancel">Discard</button>
   <div class="">
     <button  class="btn btn-quaternary">Save as Draft</button>
     <button  class="btn btn-primary">Save & Send</button>
@@ -214,12 +124,45 @@
  </div>
   </form>
 </div>
-<div class="overlay hidden" onclick="closeModal()"></div>
-<script src="./js/theme-toggle.js"></script>
-<script src="./components/main-modal/main-modal.js"></script>
-<script src="./components/buttons/button.js"></script>
-<script src="./components/header/header.js"></script>
-<script src="./components/card/card.js"></script>
-<script type="module" src="./js/main.js"></script>
+
+<script src="../buttons/button.js"></script>
+<script src="../form/input/input.js"></script>
+<script src="./main-modal.js"></script>
+<!-- <script src="../form/input/input.js"></script> -->
+<script>
+const themeToggler = document.getElementById("theme-toggler");
+
+themeToggler.addEventListener("click", ()=>{
+  setTimeout(toggleTheme,100)})
+
+// Retrieve the theme from localStorage on page load
+const savedTheme = localStorage.getItem("theme");
+
+// Set initial theme based on localStorage or default to light theme
+// document.body.classList.toggle("dark-theme", savedTheme === "dark");
+if(savedTheme==="dark"){
+  document.body.classList.toggle("dark-theme");
+  themeToggler.src = "../../../assets/img/sun.svg";
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
+
+  // Save the current theme state to localStorage
+  localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
+
+  // Update theme toggler w image based on the new theme
+  if (document.body.classList.contains("dark-theme")) {
+    themeToggler.classList.add("icon-sun")
+    themeToggler.classList.remove("icon-moon")
+
+  } else {
+    themeToggler.classList.remove("icon-sun")
+    themeToggler.classList.add("icon-moon")
+  }
+
+}
+
+</script>
 </body>
 </html>

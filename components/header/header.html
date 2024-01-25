@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header | Invoice App</title>
+  <link rel="stylesheet" href="./header.css">
+  <link rel="stylesheet" href="../../assets/img/icomoon/style.css">
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../components/buttons/buttons.css">
+
+</head>
+<body class="main">
+  <h2 id="theme-toggler" style="color: var(--text-color); cursor: pointer;" >Click to toggle theme</h2>
+  <header class="header">
+    <div class="invoice-title-wrapper">
+      <h1 class="invoice__title">Invoices</h1>
+      <h4 class="invoice__number">There are 7 total invoices</h4>
+    </div>
+    <div class="filter-wrapper">
+      <div class="filter" >
+        <h3 class="filter__title">
+          Filter <span>by status</span>
+        </h3>
+        <svg class="filter__icon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L5.2279 5.2279L9.4558 1" stroke="CurrentColor" stroke-width="2"/>
+        </svg>
+      </div>
+          <ul role="list" class="filter__list">
+            <li class="filter__list__item">
+              <input type="checkbox">
+              Paid
+            </li>
+            <li class="filter__list__item">
+              <input type="checkbox">
+              Pending
+            </li>
+            <li class="filter__list__item">
+              <input type="checkbox">
+              Draft
+            </li>
+          </ul>
+      <button class="btn btn-new-invoice">
+        <img src="../../assets/img/plus.svg" alt="" width="32" height="32">
+        <span>New <span>Invoice</span></span></button>
+    </div>
+  </header>
+  <script src="./header.js"></script>
+  <script src="../../js/theme-toggle.js"></script>
+</body>
+</html>

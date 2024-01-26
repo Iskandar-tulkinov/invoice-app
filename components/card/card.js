@@ -81,26 +81,3 @@ function showInvoices() {
    });
 }
 
-// function showInvoiceDetail(ID) {
-//   loadInvoicesFromLocalStorage()
-//   let invoice = invoices.find(invoice => {
-//     return invoice.id.toString() === ID.toString();
-//   });
-//   let cardTemplate;
-//   cardTemplate.innerHTML =`
-//   <div class="card">
-//     <div class="card__header">
-//       <span class="card__header__title">Invoice #${invoice.id}</span>
-//       <span class="card__header__date">${invoice.dueDate}</span>
-//     </div>
-//     <div class="card__body">
-//       <span class="card__body__to">${invoice.billTo}</span>
-//       <span class="card__body__amount">£${invoice.invoiceAmount}</span>
-//     </div>
-//     <div class="card__footer">
-//       <span class="card__footer__status ${invoice.status}">${invoice.status}</span>
-//     </div>
-//   </div>
-//   `
-//   cardBox.innerHTML += cardTemplate;
-// }

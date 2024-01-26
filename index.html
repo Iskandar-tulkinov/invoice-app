@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invoice App</title>
+  <!-- Fav Icon -->
   <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+
   <link rel="stylesheet" href="./assets/img/icomoon/style.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/variables.css">
+
   <link rel="stylesheet" href="./components/buttons/buttons.css">
   <link rel="stylesheet" href="./components/form/input/input.css">
   <link rel="stylesheet" href="./components/main-modal/main-modal.css">
@@ -71,38 +74,37 @@
     </header>
     <section class="section ">
       <div id="card-box">
-
-      <!-- </div>
-      <div class="card">
-        <span class="invoice__id"><span>#</span>RT3080</span>
-        <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
-        <span class="invoice__to">Jensen Huang</span>
-        <span class="invoice__amount">£ 1,800.90</span>
-        <span >
-          <span class="invoice__status paid">paid</span>
-          <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
-        </span>
+        <div class="card">
+          <span class="invoice__id"><span>#</span>RT3080</span>
+          <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
+          <span class="invoice__to">Jensen Huang</span>
+          <span class="invoice__amount">£ 1,800.90</span>
+          <span >
+            <span class="invoice__status paid">paid</span>
+            <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
+          </span>
+        </div>
+        <div class="card">
+          <span class="invoice__id"><span>#</span>RT3080</span>
+          <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
+          <span class="invoice__to">Melissa Clard</span>
+          <span class="invoice__amount">£ 1,800.90</span>
+          <span >
+            <span class="invoice__status pending">paid</span>
+            <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
+          </span>
+        </div>
+        <div class="card">
+          <span class="invoice__id"><span>#</span>LG9581</span>
+          <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
+          <span class="invoice__to">John Cena</span>
+          <span class="invoice__amount">£ 1,800.90</span>
+          <span >
+            <span class="invoice__status draft">paid</span>
+            <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
+          </span>
+        </div>
       </div>
-      <div class="card">
-        <span class="invoice__id"><span>#</span>RT3080</span>
-        <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
-        <span class="invoice__to">Melissa Clard</span>
-        <span class="invoice__amount">£ 1,800.90</span>
-        <span >
-          <span class="invoice__status pending">paid</span>
-          <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
-        </span>
-      </div>
-      <div class="card">
-        <span class="invoice__id"><span>#</span>LG9581</span>
-        <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
-        <span class="invoice__to">John Cena</span>
-        <span class="invoice__amount">£ 1,800.90</span>
-        <span >
-          <span class="invoice__status draft">paid</span>
-          <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
-        </span>
-      </div> -->
 
       <div class="no-invoice hidden">
         <img class="no-invoice__img" src="./assets/img/no-data-img.svg" alt="No invoices message">
@@ -114,8 +116,8 @@
     </section>
 
     <!-- Show Invoice Details -->
-    <section class="section hidden">
-      <div class="invoice-detail-section">
+    <section class="section invoice-detail-section hidden">
+
         <div class="go-back">
           <svg class="left-icon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L5.2279 5.2279L9.4558 1" stroke="CurrentColor" stroke-width="2"/>
@@ -204,7 +206,7 @@
             <span class="total-price ">£ 556.00</span>
           </div>
         </div>
-      </div>
+
     </section>
   </main>
 </div>
@@ -219,15 +221,15 @@
       <span class="error-message">can’t be empty</span>
     </div>
 
-    <div class="flex gap-6 ">
-      <div class="form-group" style="width: fit-content;">
+    <div class=" flex gap-6 ">
+      <div class="form-group">
         <label class="label" for="sellers-city">City</label>
         <input class="input w-38"  type="text" name="sellers-city" id="sellers-city" placeholder="London">
           <span class="error-message">can’t be empty</span>
       </div>
       <div class="form-group">
-        <label class="label" for="sellers-post-code">Post Code</label>
-        <input class="input w-38" type="text" name="sellers-post-code" id="sellers-post-code" placeholder="E1 3EZ">
+        <label class="label" for="sellers-postcode">Post Code</label>
+        <input class="input w-38" type="text" name="sellers-postcode" id="sellers-postcode" placeholder="E1 3EZ">
           <span class="error-message">can’t be empty</span>
       </div>
       <div class="form-group">
@@ -239,8 +241,8 @@
 
     <h3 class="bill-type">Bill to</h3>
     <div class="form-group">
-      <label class="label" for="clients-f-name">Client’s Name</label>
-      <input class="input w-126" type="text" name="clients-f-name" id="clients-f-name" placeholder="Alex Grim">
+      <label class="label" for="clients-full-name">Client’s Name</label>
+      <input class="input w-126" type="text" name="clients-full-name" id="clients-full-name" placeholder="Alex Grim">
         <span class="error-message">can’t be empty</span>
     </div>
 
@@ -263,8 +265,8 @@
           <span class="error-message">can’t be empty</span>
       </div>
       <div class="form-group">
-        <label class="label" for="clients-post-code">Post Code</label>
-        <input class="input w-38" type="text" name="clients-post-code" id="clients-post-code" placeholder="BD1 9PB">
+        <label class="label" for="clients-postcode">Post Code</label>
+        <input class="input w-38" type="text" name="clients-postcode" id="clients-postcode" placeholder="BD1 9PB">
           <span class="error-message">can’t be empty</span>
       </div>
       <div class="form-group">
@@ -278,7 +280,7 @@
 
       <div class="form-group">
         <label class="label" for="date">Issue Date</label>
-        <input class="input w-60" type="date" name="date" id="date">
+        <input class="input w-60" type="date" name="date" id="date" readonly>
           <span class="error-message">can’t be empty</span>
       </div>
 
@@ -302,6 +304,24 @@
     </div>
     <h2 class="margin-bottom-14 items-list__title">Item List</h2>
       <ul class="items-list">
+        <li class="item">
+          <span>
+            <input class="input w-54" type="text" name="items-name" placeholder="Banner Design">
+            <span class="error-message">can’t be empty</span>
+          </span>
+          <span>
+            <input class="input input-quantity w-12 h-12 input-number" inputmode="numeric" type="number" name="quantity" placeholder="1">
+            <span class="error-message">can’t be empty</span>
+          </span>
+          <span>
+            <input class="input input-price w-25 input-number" inputmode="numeric" type="number" name="price" placeholder="156.00">
+            <span class="error-message">can’t be empty</span>
+          </span>
+          <span class="items-total-price-wrapper">
+            <span class="items-total-price">0.00</span>
+            <i onclick="deleteItem(this)" class="icon-delete-icon"></i>
+          </span>
+        </li>
       </ul>
       <button class="btn add-item-btn btn-quinary btn-add-item w-126">+ Add New Item</button>
 
@@ -313,8 +333,8 @@
  <div class="buttons-wrapper">
   <button onclick="closeModal()" class="btn btn-cancel">Discard</button>
   <div class="">
-    <button  class="btn btn-quaternary">Save as Draft</button>
-    <button  class="btn btn-primary">Save & Send</button>
+    <button  class="btn btn-quaternary draft-btn">Save as Draft</button>
+    <button  class="btn btn-primary save-btn">Save & Send</button>
   </div>
  </div>
   </form>
@@ -322,6 +342,7 @@
 <div class="overlay hidden" onclick="closeModal()"></div>
 <script src="./js/theme-toggle.js"></script>
 <script src="./components/main-modal/main-modal.js"></script>
+<script src="./components/form/input/input.js"></script>
 <script src="./components/buttons/button.js"></script>
 <script src="./components/header/header.js"></script>
 <script src="./components/card/card.js"></script>

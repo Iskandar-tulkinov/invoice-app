@@ -11,16 +11,14 @@
 }
 html,
 body {
-  max-width: 250vh;
    height: 100%;
    width: 100%;
    font-family: "League Spartan", "Arial", sans-serif;
-   font-size: 16px;
    background-color:  var(--main-bg-color);
 }
 .container {
    display: flex;
-   min-height: 100vh;
+   height: 100vh;
    width: 100%;
    height: max-content;
    background: var(--main-bg-color);
@@ -34,13 +32,13 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--main-bg-color);
-  position: relative;
+  /* position: relative; */
+  padding: 77px 252px 71px;
 }
 .section {
  display: flex;
  flex-direction: column;
  background-color: transparent;
- padding: 77px 252px 71px;
  }
 .overlay {
    position: fixed;
@@ -52,51 +50,13 @@ body {
    opacity: 0.5;
    z-index: 5;
 }
-
-
-
-
-
-
 /* Utility classes */
 .hidden {
    display: none;
 }
-.w-126 {
-   width: 504px;
-   flex-shrink: 0;
-}
-.w-38 {
-   width: 152px;
-   flex-shrink: 0;
-}
-.w-60 {
-   width: 240px;
-   flex-shrink: 0;
-}
-.w-54 {
-   width: 214px;
-   flex-shrink: 0;
-}
-
-.w-16 {
-   width: 64px;
-   flex-shrink: 0;
-}
-.w-12 {
-   width: 48px;
-   flex-shrink: 0;
-}
-.h-12 {
-   height: 48px;
-   flex-shrink: 0;
-}
-.w-25 {
-   width: 100px;
-   flex-shrink: 0;
-}
 .flex {
    display: flex;
+   width: trasparent;
 }
 .justify-between{
    display: flex;
@@ -105,3 +65,17 @@ body {
 .gap-6 {
    gap: 24px;
 }
+/* .w-54 {
+   width: 214px;
+   flex-shrink: 0;
+} */
+
+
+/* .w-25 {
+   width: 100px;
+   flex-shrink: 0;
+} */
+/* .w-38 {
+   width: 152px;
+   flex-shrink: 0;
+} */

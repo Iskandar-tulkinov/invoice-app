@@ -1,8 +1,8 @@
 .header {
    display: flex;
    justify-content: space-between;
-   /* margin: 0 auto; */
- 
+   margin-bottom: 71px;
+
 }
 
 .invoice-title-wrapper {

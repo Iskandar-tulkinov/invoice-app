@@ -1,17 +1,16 @@
 @import url(../../../assets/css/normalize.css);
-body {
-   max-width: 1440px;
+.main{
+  max-width: 1440px;
 }
+
 .main-modal {
-   max-width: 720px;
-   width: 100%;
-   z-index: 9999;
+  height: 100vh;
+   z-index: 55;
    background-color: var(--modal-bg-color);
    border-top-right-radius: 20px;
    border-bottom-right-radius: 20px;
    /* overflow-x: hidden; */
    overflow-y: scroll;
-   padding:120px 56px 200px;
    z-index: 10;
    position: absolute;
    top: 0;
@@ -22,8 +21,7 @@ body {
   position: fixed;
   top: 0;
   left: 100px;
-  width: 720px;
-  /* height: 100px; */
+  width: 600px;
   padding: 59px 56px 24px ;
   z-index: 1;
   background: var(--modal-bg-color);
@@ -34,8 +32,8 @@ body {
 }
 .btn.btn-add-item {
    margin-top: 18px;
+   width: 100%;
 }
-
 
 .icon-delete-icon{
   cursor: pointer;
@@ -53,6 +51,7 @@ border-radius: 5px;
 }
 
 .buttons-wrapper {
+  border: 1px  solid red;
   background-color: var(--modal-bg-color);
   display: flex;
   gap: 140px;
@@ -65,11 +64,11 @@ border-radius: 5px;
 .buttons-wrapper::before {
   display: none;
    content: "";
-   position: absolute;
+   position: fixed;
    top: 0;
-   left: 0;
+   left:0;
    transform: translateY(-100%);
-   width: 650px;
+   width: 600px;
    height: 80px;
    flex-shrink: 0;
    background:var(--modal-scroll-bg-color);

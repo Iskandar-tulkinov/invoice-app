@@ -48,6 +48,7 @@ addNewInvoiceBtn.addEventListener("click", (e) => {
   e.preventDefault()
   mainModal.classList.remove("hidden");
   overlay.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
 })
 function closeModal() {
   mainModal.classList.add("hidden");

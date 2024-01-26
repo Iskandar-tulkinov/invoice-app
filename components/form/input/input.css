@@ -68,12 +68,12 @@
    border-color: #7c5dfa;
 }
 
-.input.input-quantity {
-   /* padding: 4px 5px; */
-}
+/* .input.input-quantity {
+   /* padding: 4px 5px;
+} */
 
 .error-message {
-   /* display: none; */
+   display: none;
    position: absolute;
    right: 17px;
    top: 1px;
@@ -85,7 +85,7 @@
    letter-spacing: -0.208px;
 }
 .warning-message {
-   /* display: none; */
+   display: none;
    position: absolute;
    z-index: 10;
    left: 17px;
@@ -96,6 +96,22 @@
    font-weight: 600;
    line-height: 15px;
    letter-spacing: -0.208px;
+}
+.error{
+  border:1px solid red;
+}
+.input.error::before{
+  /* display: none; */
+  display: block;
+  position: absolute;
+  right: 17px;
+  top: 1px;
+  color: var(--warning);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px; /* 150% */
+  letter-spacing: -0.208px;
 }
 
 .items-list__title {

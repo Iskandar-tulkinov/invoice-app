@@ -1,9 +1,9 @@
+@import url(../img/icomoon/style.css);
+@import url(./variables.css);
 @font-face {
    font-family: "League Spartan";
    src: url(../fonts/LeagueSpartan-VariableFont_wght.ttf);
 }
-@import url(./variables.css);
-@import url(../img/icomoon/style.css);
 * {
    margin: 0;
    padding: 0;
@@ -64,6 +64,9 @@ body {
 }
 .gap-6 {
    gap: 24px;
+}
+.uppercase{
+   text-transform: uppercase;
 }
 /* .w-54 {
    width: 214px;

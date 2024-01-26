@@ -74,7 +74,7 @@
     </header>
     <section class="section ">
       <div id="card-box">
-        <div class="card">
+        <!-- <div class="card">
           <span class="invoice__id"><span>#</span>RT3080</span>
           <span class="invoice__due-date"><span>Due </span> 19 Aug 2021</span>
           <span class="invoice__to">Jensen Huang</span>
@@ -103,7 +103,7 @@
             <span class="invoice__status draft">paid</span>
             <img class="right-icon"  src="./assets/img/arrow-right.svg" alt="Right arrow icon">
           </span>
-        </div>
+        </div> -->
       </div>
 
       <div class="no-invoice hidden">
@@ -248,7 +248,7 @@
 
     <div class="form-group">
       <label class="label" for="clients-email">Client’s Email</label>
-      <input class="input w-126" type="email" name="clients-email" id="clients-email" placeholder="alexgrim@mail.com">
+      <input class="input w-126" type="email" name="clients-email" id="clients-email" required placeholder="alexgrim@mail.com">
         <span class="error-message">can’t be empty</span>
     </div>
 
@@ -278,11 +278,11 @@
 
   <div class="flex gap-6">
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label class="label" for="date">Issue Date</label>
         <input class="input w-60" type="date" name="date" id="date" readonly>
           <span class="error-message">can’t be empty</span>
-      </div>
+      </div> -->
 
       <div class="form-group payment-terms-wrapper">
         <label class="label" for="terms"  class="payment-terms">Payment Terms</label>
@@ -342,10 +342,11 @@
 <div class="overlay hidden" onclick="closeModal()"></div>
 <script src="./js/theme-toggle.js"></script>
 <script src="./components/main-modal/main-modal.js"></script>
-<script src="./components/form/input/input.js"></script>
 <script src="./components/buttons/button.js"></script>
 <script src="./components/header/header.js"></script>
-<script src="./components/card/card.js"></script>
+<!-- <script src="./components/form/input/input.js" ></script> -->
+<!-- <script src="./components/card/card.js" type="module"></script> -->
+<script  src="./components/card/card.js"></script>
 <script type="module" src="./js/main.js"></script>
 </body>
 </html>
